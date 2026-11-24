@@ -518,3 +518,19 @@ createParticles();
 updateDaysCounter();
 randomizeHeartCollage();
 setupTypewriter();
+
+
+// ===== MIDDLE PHOTO SLIDESHOW =====
+const slides = document.querySelectorAll('.photo-slideshow .slide-image');
+
+let currentSlide = 0;
+
+if (slides.length > 1) {
+    setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+
+        currentSlide = (currentSlide + 1) % slides.length;
+
+        slides[currentSlide].classList.add('active');
+    }, 3000);
+}
