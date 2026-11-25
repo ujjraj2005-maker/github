@@ -532,5 +532,5 @@ if (slides.length > 1) {
         currentSlide = (currentSlide + 1) % slides.length;
 
         slides[currentSlide].classList.add('active');
-    }, 3000);
+    }, 10000);
 }
